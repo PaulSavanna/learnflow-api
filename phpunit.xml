@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Feature">
+            <directory>tests/Feature</directory>
+        </testsuite>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_ENV" force="true" value="testing"/>
+        <env name="APP_MAINTENANCE_DRIVER" force="true" value="file"/>
+        <env name="BCRYPT_ROUNDS" force="true" value="4"/>
+        <env name="CACHE_STORE" force="true" value="array"/>
+        <env name="DB_CONNECTION" force="true" value="sqlite"/>
+        <env name="DB_DATABASE" force="true" value=":memory:"/>
+        <env name="LOG_CHANNEL" force="true" value="stack"/>
+        <env name="MAIL_MAILER" force="true" value="array"/>
+        <env name="QUEUE_CONNECTION" force="true" value="sync"/>
+        <env name="SESSION_DRIVER" force="true" value="array"/>
+        <env name="TELEGRAM_ENABLED" force="true" value="false"/>
+    </php>
+</phpunit>
