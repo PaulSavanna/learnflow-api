@@ -56,5 +56,5 @@ The backend validates allowed status transitions and rejects invalid business ac
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
-cd LearnFlow
+git clone https://github.com/PaulSavanna/learnflow-api.git
+cd learnflow-api
