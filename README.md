@@ -1,5 +1,12 @@
 # LearnFlow API
 
+![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20?logo=laravel&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-blue?logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![CI](https://github.com/PaulSavanna/learnflow-api/actions/workflows/ci.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 LearnFlow API is a Laravel-based backend project for managing a candidate hiring and learning workflow.
 
 The system covers the full flow from vacancy creation and candidate processing to interviews, test assignments, courses, progress tracking, comments, and activity logs.
@@ -120,7 +127,3 @@ This project is designed as a backend portfolio piece that shows practical work 
 - API development
 - testable backend code
 - containerized local setup
-
-## Status
-
-This repository is under active polishing and improvement.

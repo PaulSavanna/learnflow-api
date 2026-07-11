@@ -9,29 +9,25 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    services:
-      redis:
-        image: redis:7-alpine
-        ports: ['6379:6379']
-        options: >-
-          --health-cmd "redis-cli ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          extensions: mbstring, xml, ctype, json, bcmath, pdo, pgsql
+          extensions: mbstring, xml, ctype, json, bcmath, pdo, sqlite3
           coverage: none
-      - name: Install Dependencies
+
+      - name: Install Composer dependencies
         run: composer install --no-progress --prefer-dist
-      - name: Generate Application Key
+
+      - name: Copy testing environment
+        run: cp .env.testing .env
+
+      - name: Generate application key
         run: php artisan key:generate --ansi
-      - name: Run Migrations
-        run: php artisan migrate --force
-      - name: Run Tests
+
+      - name: Run tests
         run: php artisan test
